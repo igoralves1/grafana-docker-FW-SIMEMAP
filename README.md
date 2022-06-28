@@ -35,7 +35,7 @@ Note:
 
 To get all `ENV` variables in a running container: 
 ```
-docker inspect -f '{{range $index, $value := .Config.Env}}{{$value}} {{end}}' a00bc4204fb6
+docker inspect -f '{{range $index, $value := .Config.Env}}{{$value}} {{end}}' 081aa6424b50
 ```
 
 To get access to the container:
@@ -54,8 +54,8 @@ cat /etc/grafana/grafana.ini
 2. Selecione `Plugins`
 3. At the plugin list type `Amazon Timestream`
 4. Click `Signed` and `Install`
-5. After instalation choose `create datasource`
-6. Choose a name to the connection - Note: It can have many connections 
+5. After instal choose `Create a Amazon Timestream Data Source`
+6. Choose a name to this connection - Note: It can have many connections 
 7. Choose `default region`, `database` and `table`
 8. Test the connection
 
