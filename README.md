@@ -20,7 +20,7 @@ docker run -d \
 -v grafana-storage:/var/lib/grafana \
 grafana/grafana-oss
 ```
-Grafana is available at: `0.0.0.0:3000`
+Grafana is available at: `http://0.0.0.0:3000/login`
 
 
 To get all ENV variables in a running container: 
