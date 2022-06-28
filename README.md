@@ -78,4 +78,6 @@ docker rmi $(docker images -a -q)
 docker volume ls
 docker volume rm grafana-storage
 docker volume create grafana-storage
+docker volume inspect grafana-storage
 ```
+- [Docker Volume](https://docs.docker.com/engine/reference/commandline/volume)
