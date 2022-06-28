@@ -20,6 +20,13 @@ docker run -d \
 -v grafana-storage:/var/lib/grafana \
 grafana/grafana-oss
 ```
+Note:
+> If AWS credentials are not properly set, Grafana will not be able to get connected to AWS cloud and services. After to build the container, need to check if the AWS ENVs are correct. To get all `ENV` variables in a running container (CONTAINER ID: 01d56c9434d8) run: 
+```
+docker inspect -f '{{range $index, $value := .Config.Env}}{{$value}} {{end}}' 01d56c9434d8
+```
+> Should be able to see the AWS credentials properly set.
+
 Grafana is available at: [Local Login Page](http://0.0.0.0:3000/login)
 
 First Connection - Under login page use the followin credentials:
@@ -33,10 +40,7 @@ After first login change the password to new password:
 Note: 
 > Login credentials can be found at `[security]` section of `/etc/grafana/grafana.ini` - line `240`:
 
-To get all `ENV` variables in a running container: 
-```
-docker inspect -f '{{range $index, $value := .Config.Env}}{{$value}} {{end}}' 081aa6424b50
-```
+
 
 To get access to the container:
 ```
