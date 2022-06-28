@@ -63,7 +63,8 @@ cat /etc/grafana/grafana.ini
 7. Choose `default region`, `database`, `table`, `Measure`
 8. Click `Save & Test`
    1. If all is good should get the message `Connection success`
-9. From now the Grafana environment is connected to AWS Timestream.
+9. From now the Grafana environment is connected to AWS Timestream
+10. Create a new Dashboard
 
 [Amazon Timestream Plugin](https://grafana.com/grafana/plugins/grafana-timestream-datasource/)
 
