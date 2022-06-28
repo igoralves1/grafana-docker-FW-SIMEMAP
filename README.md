@@ -60,8 +60,8 @@ cat /etc/grafana/grafana.ini
 4. Click `Signed` and `Install`
 5. After instal choose `Create a Amazon Timestream Data Source`
 6. Choose a name to this connection - Note: It can have many connections 
-7. Choose `default region`, `database` and `table`
-8. Test the connection
+7. Choose `default region`, `database`, `table`, `Measure`
+8. Click Save and Test the connection
 
 [Amazon Timestream Plugin](https://grafana.com/grafana/plugins/grafana-timestream-datasource/)
 
