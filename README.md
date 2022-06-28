@@ -61,3 +61,20 @@ After first login change the password to new password:
 [Amazon Timestream Plugin](https://grafana.com/grafana/plugins/grafana-timestream-datasource/)
 
 [Using Amazon Managed Grafana to query and visualize data from Amazon Timestream](https://www.youtube.com/watch?v=4oMbsLY28vc)
+
+
+# Useful Docker cmds
+
+```
+
+docker ps -a
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+
+docker images
+docker rmi $(docker images -a -q)
+
+docker volume ls
+docker volume rm grafana-storage
+docker volume create grafana-storage
+```
