@@ -20,10 +20,20 @@ docker run -d \
 -v grafana-storage:/var/lib/grafana \
 grafana/grafana-oss
 ```
-Grafana is available at: [Login](http://0.0.0.0:3000/login)
+Grafana is available at: [Local Login Page](http://0.0.0.0:3000/login)
 
+First Connection - Under login page use the followin credentials:
+> - `user`: admin
+> - `password`: admin
 
-To get all ENV variables in a running container: 
+After first login change the password to new password:
+> - `user`: admin
+> - `password`: xXxxxxxxx08!
+
+Note: 
+> Login credentials can be found at `[security]` section of `/etc/grafana/grafana.ini` - line `240`:
+
+To get all `ENV` variables in a running container: 
 ```
 docker inspect -f '{{range $index, $value := .Config.Env}}{{$value}} {{end}}' a00bc4204fb6
 ```
@@ -37,16 +47,6 @@ To get the information contained into the `grafana.ini`:
 ```
 cat /etc/grafana/grafana.ini
 ```
-
-Login credentials: can be found at `[security]` section of `/etc/grafana/grafana.ini` - line `240`:
-
-- user: admin
-- password: admin
-
-After first login change the password to new password:
-
-- user: admin
-- password: xXxxxxxxx08!
 
 ## [Visualizing Data in Amazon Timestream using Grafana](https://www.youtube.com/watch?v=pilkz645cs4)
 
