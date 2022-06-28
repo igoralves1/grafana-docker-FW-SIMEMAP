@@ -17,6 +17,7 @@ docker run -d \
 -e "GF_AWS_default_ACCESS_KEY_ID=xxx" \
 -e "GF_AWS_default_SECRET_ACCESS_KEY=xxx" \
 -e "GF_AWS_default_REGION=us-east-2" \
+-v grafana-storage:/var/lib/grafana \
 grafana/grafana-oss
 ```
 Grafana is available at: `0.0.0.0:3000`
