@@ -3,6 +3,8 @@
 [Configure a Grafana Docker image
 ](https://grafana.com/docs/grafana/next/setup-grafana/configure-docker/#default-paths)
 
+[Grafana GitHub](https://github.com/grafana)
+
 Create a persistent volume for your data in `/var/lib/grafana` (database and plugins):
 ```
 docker volume create grafana-storage
